@@ -61,6 +61,8 @@ Sync a single file:
 azcopy sync "/path/to/file.txt" "https://[account].blob.core.windows.net/[container]/[path/to/blob]"
 ```
 
+[!NOTE] The destination blob MUST exist. Use ```azcopy copy``` to copy a single file which does not yet exist in the destination.
+
 Same as above, but this time, also compute MD5 hash of the file content and save it as the blob's Content-MD5 property:
 
 ```azcopy
